@@ -1,0 +1,15 @@
+version: 4.1.29
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: About Me
+        description: section header on the homepage
+        action: hover
+  - prompt: Locate the main call to action button on the homepage.
+    commands:
+      - command: scroll-until-text
+        text: Contact
+        direction: down
