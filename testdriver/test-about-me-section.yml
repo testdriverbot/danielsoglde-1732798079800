@@ -1,0 +1,18 @@
+version: 4.1.29
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Scroll to the "About Me" section.
+    commands: []
+  - prompt: Assert that the "About Me" text is displayed correctly.
+    commands:
+      - command: assert
+        expect: the "About Me" text is displayed correctly
+  - prompt: >-
+      Assert that there are no display errors in this section.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: there are no display errors in the "About Me" section
